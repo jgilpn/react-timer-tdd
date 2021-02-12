@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Timer.css'
 import TimerButton from '../components/TimerButton'
 
@@ -17,6 +17,10 @@ const resetTimer = () => {
 
 // Timer Component
 const Timer = () => {
+  const [minutes, setMinutes] = useState(25)
+  const [seconds, setSeconds] = useState(0)
+  const [isOn, setIsOn] = useState(false)
+
   return (
     <div className='timer-container'>
       <div className='time-display'></div>
